@@ -15,7 +15,7 @@ class StudentController extends Controller
         return view('student.index', [
             'title' => 'Student',
             'students' => Student::latest()->get(),
-            'students' => Student::orderBy('name', 'asc')->get(),
+            // 'students' => Student::orderBy('name', 'asc')->get(),
         ]);
 
     }
@@ -25,7 +25,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        return view('student.create', ['title' => ' Student']);
+        return view('student.create', ['title' => 'Create Student']);
 
     }
 
@@ -68,7 +68,7 @@ class StudentController extends Controller
     public function edit(Student $student)
     {
         return view('student.edit', [
-            'title' => 'edit Student',
+            'title' => 'Edit Student',
             'student' => $student,
         ]);    }
 

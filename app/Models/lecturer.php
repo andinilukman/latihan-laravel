@@ -13,6 +13,7 @@ class lecturer extends Model
     /** @use HasFactory<\Database\Factories\LecturerFactory> */
     use HasFactory;
 
+    protected $with = ['department'];
      public function department(): BelongsTo
      {
         
